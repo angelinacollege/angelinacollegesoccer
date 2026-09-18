@@ -611,7 +611,7 @@
                 const dot = document.createElement("button");
                 dot.type = "button";
                 dot.setAttribute("aria-label", `Go to player ${i + 1}`);
-                dot.className = `h-2.5 rounded-full transition-all duration-300 ${i === 0 ? 'bg-orange-500 w-6' : 'bg-neutral-700 w-2.5 hover:bg-slate-400'}`;
+                dot.className = `h-2.5 rounded-full transition-all duration-500 ${i === 0 ? 'bg-orange-500 w-6' : 'bg-neutral-700 w-2.5 hover:bg-slate-400'}`;
                 dot.onclick = (e) => {
                     e.preventDefault();
                     e.stopPropagation();

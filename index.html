@@ -243,356 +243,39 @@
                 </div>
             </div>
         </section>
+<!-- Slider Container -->
+<div class="relative max-w-4xl mx-auto" id="player-slider-container">
+    <!-- Counter Badge -->
+    <div class="absolute -top-10 right-0 z-20 px-3 py-1 rounded-full bg-neutral-800 border border-neutral-700 text-xs text-slate-300 font-mono">
+        <span id="current-slide-num" class="text-orange-400 font-bold">1</span> / 14
+    </div>
 
-        <!-- Next Level Section -->
-        <!-- NEXT LEVEL PLAYERS SECTION (14 PLAYERS) -->
-<section id="next-level" class="py-20 relative bg-dark-900 border-b border-neutral-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-12">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blueAccent-500/10 border border-blueAccent-500/30 text-blueAccent-400 text-xs font-semibold uppercase tracking-wider mb-4">
-                <i class="fa-solid fa-graduation-cap text-orangeAccent-400"></i>
-                Pathway To 4-Year Universities
-            </div>
-            <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight uppercase">
-                THE NEXT LEVEL PLAYERS
-            </h2>
-            <p class="mt-4 text-base text-slate-300">
-                14 Roadrunners who advanced their academic and athletic careers to NCAA D1, D2, and NAIA programs across North America.
-            </p>
+    <!-- Slide Nav Button: Previous -->
+    <button type="button" 
+            onclick="window.prevPlayerSlide(event)" 
+            aria-label="Previous Player" 
+            class="absolute -left-4 sm:-left-12 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-neutral-900 border border-neutral-700 hover:border-blue-500 text-white flex items-center justify-center transition-all hover:bg-blue-600 hover:scale-110 shadow-2xl cursor-pointer pointer-events-auto">
+        <i class="fa-solid fa-chevron-left text-base"></i>
+    </button>
+
+    <!-- Slide Nav Button: Next -->
+    <button type="button" 
+            onclick="window.nextPlayerSlide(event)" 
+            aria-label="Next Player" 
+            class="absolute -right-4 sm:-right-12 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-neutral-900 border border-neutral-700 hover:border-blue-500 text-white flex items-center justify-center transition-all hover:bg-blue-600 hover:scale-110 shadow-2xl cursor-pointer pointer-events-auto">
+        <i class="fa-solid fa-chevron-right text-base"></i>
+    </button>
+
+    <!-- Viewport Container for Swipe & Drag -->
+    <div id="player-slides-viewport" class="overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900 shadow-2xl relative cursor-grab active:cursor-grabbing select-none">
+        <div id="player-slides-track" class="flex transition-transform duration-500 ease-out">
+            <!-- 14 Player Card Elements -->
         </div>
+    </div>
 
-        <!-- Slider Container -->
-        <div class="relative max-w-4xl mx-auto" id="player-slider-container">
-            <!-- Counter Badge -->
-            <div class="absolute -top-10 right-0 z-10 px-3 py-1 rounded-full bg-dark-800 border border-neutral-700 text-xs text-slate-300 font-mono">
-                <span id="current-slide-num" class="text-orangeAccent-400 font-bold">1</span> / 14
-            </div>
-
-            <!-- Slide Nav Button: Previous -->
-            <button id="slide-prev-btn" onclick="prevPlayerSlide()" aria-label="Previous Player" class="absolute -left-5 sm:-left-12 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-dark-800/90 border border-neutral-700 hover:border-blueAccent-500 text-white flex items-center justify-center transition-all hover:bg-blueAccent-500 hover:scale-110 shadow-lg">
-                <i class="fa-solid fa-chevron-left text-base"></i>
-            </button>
-
-            <!-- Slide Nav Button: Next -->
-            <button id="slide-next-btn" onclick="nextPlayerSlide()" aria-label="Next Player" class="absolute -right-5 sm:-right-12 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-dark-800/90 border border-neutral-700 hover:border-blueAccent-500 text-white flex items-center justify-center transition-all hover:bg-blueAccent-500 hover:scale-110 shadow-lg">
-                <i class="fa-solid fa-chevron-right text-base"></i>
-            </button>
-
-            <!-- Slides Wrapper -->
-            <div class="overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900 shadow-2xl relative">
-                <div id="player-slides-track" class="flex transition-transform duration-500 ease-out">
-                    
-                    <!-- Player 1 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-blueAccent-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80" alt="Omar Mora" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-blueAccent-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NCAA D1</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Midfielder</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">OMAR MORA</h3>
-                                <p class="text-slate-400 text-xs">Hometown: San Antonio, TX</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">Oral Roberts University</div>
-                                <div class="text-xs text-slate-300">Division I • Summit League</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Player 2 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-blueAccent-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&w=800&q=80" alt="Kaito Ueki" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-blueAccent-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NCAA D1</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Defender</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">KAITO UEKI</h3>
-                                <p class="text-slate-400 text-xs">Hometown: Tokyo, Japan</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">Coastal Carolina University</div>
-                                <div class="text-xs text-slate-300">Division I • Sun Belt Conference</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Player 3 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-blueAccent-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80" alt="Bryan Aguirre" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-blueAccent-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NCAA D1</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Forward</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">BRYAN AGUIRRE</h3>
-                                <p class="text-slate-400 text-xs">Hometown: Houston, TX</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">Purdue Fort Wayne</div>
-                                <div class="text-xs text-slate-300">Division I • Horizon League</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Player 4 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-blueAccent-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80" alt="Rochaine Baker" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-blueAccent-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NCAA D1</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Defender</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">ROCHAINE BAKER</h3>
-                                <p class="text-slate-400 text-xs">Hometown: Kingston, Jamaica</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">University of the Incarnate Word</div>
-                                <div class="text-xs text-slate-300">Division I • OVC</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Player 5 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1520342868574-5fa3804e551c?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-blueAccent-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1520342868574-5fa3804e551c?auto=format&fit=crop&w=800&q=80" alt="Jhosua Jory" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-blueAccent-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NCAA D1</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Forward</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">JHOSUA JORY</h3>
-                                <p class="text-slate-400 text-xs">Hometown: Bogota, Colombia</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">University of Tulsa</div>
-                                <div class="text-xs text-slate-300">Division I • AAC</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Player 6 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-orangeAccent-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80" alt="Christian Mezas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-orangeAccent-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NCAA D2</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Midfielder</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">CHRISTIAN MEZAS</h3>
-                                <p class="text-slate-400 text-xs">Hometown: Dallas, TX</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">St. Edward's University</div>
-                                <div class="text-xs text-slate-300">Division II • Lone Star Conference</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Player 7 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1560272564-66952074f494?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-orangeAccent-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1560272564-66952074f494?auto=format&fit=crop&w=800&q=80" alt="Lennart Poth" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-orangeAccent-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NCAA D2</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Midfielder</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">LENNART POTH</h3>
-                                <p class="text-slate-400 text-xs">Hometown: Cologne, Germany</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">Pacific University</div>
-                                <div class="text-xs text-slate-300">Division II • GNAC</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Player 8 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-orangeAccent-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" alt="Shota Tokuhisa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-orangeAccent-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NCAA D2</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Winger</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">SHOTA TOKUHISA</h3>
-                                <p class="text-slate-400 text-xs">Hometown: Osaka, Japan</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">Lubbock Christian University</div>
-                                <div class="text-xs text-slate-300">Division II • Lone Star Conference</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Player 9 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-orangeAccent-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80" alt="Diego Garcia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-orangeAccent-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NCAA D2</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Defender</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">DIEGO GARCIA</h3>
-                                <p class="text-slate-400 text-xs">Hometown: El Paso, TX</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">Midwestern State University</div>
-                                <div class="text-xs text-slate-300">Division II • Lone Star Conference</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Player 10 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-blueAccent-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&w=800&q=80" alt="Lucas Santos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-blueAccent-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NCAA D1</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Midfielder</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">LUCAS SANTOS</h3>
-                                <p class="text-slate-400 text-xs">Hometown: Sao Paulo, Brazil</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">UTRGV</div>
-                                <div class="text-xs text-slate-300">Division I • WAC</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Player 11 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-orangeAccent-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80" alt="Matteo Rossi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-orangeAccent-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NCAA D2</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Goalkeeper</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">MATTEO ROSSI</h3>
-                                <p class="text-slate-400 text-xs">Hometown: Milan, Italy</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">West Texas A&M University</div>
-                                <div class="text-xs text-slate-300">Division II • Lone Star Conference</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Player 12 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-emerald-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80" alt="Victor Hugo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-emerald-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NAIA</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Midfielder</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">VICTOR HUGO</h3>
-                                <p class="text-slate-400 text-xs">Hometown: Rio de Janeiro, Brazil</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">Florida National University</div>
-                                <div class="text-xs text-slate-300">NAIA • Continental Athletic</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Player 13 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1520342868574-5fa3804e551c?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-orangeAccent-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1520342868574-5fa3804e551c?auto=format&fit=crop&w=800&q=80" alt="Andre Filipe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-orangeAccent-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NCAA D2</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Defender</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">ANDRE FILIPE</h3>
-                                <p class="text-slate-400 text-xs">Hometown: Lisbon, Portugal</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">Rogers State University</div>
-                                <div class="text-xs text-slate-300">Division II • MIAA</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Player 14 -->
-                    <div class="w-full shrink-0 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
-                        <div class="relative group cursor-pointer shrink-0" onclick="openLightbox('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80')">
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-emerald-500/40 shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80" alt="Felipe Vasconcelos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <span class="absolute bottom-3 right-3 bg-emerald-500 text-white text-xs px-2.5 py-1 rounded-full font-bold shadow">NAIA</span>
-                        </div>
-                        <div class="space-y-4 text-center md:text-left flex-1">
-                            <div>
-                                <span class="text-xs font-semibold text-orangeAccent-400 tracking-wider uppercase">Striker</span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">FELIPE VASCONCELOS</h3>
-                                <p class="text-slate-400 text-xs">Hometown: Brasilia, Brazil</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-dark-800 border border-neutral-800 space-y-1">
-                                <div class="text-xs text-slate-400 font-medium">Transferred To</div>
-                                <div class="text-lg font-bold text-blueAccent-400">Bellevue University</div>
-                                <div class="text-xs text-slate-300">NAIA • NSAA</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+    <!-- Navigation Dots Container -->
+    <div id="player-slider-dots" class="flex justify-center items-center gap-2 mt-6 flex-wrap px-4"></div>
+</div>
 
             <!-- Dots Indicators Container -->
             <div id="player-slider-dots" class="flex justify-center items-center gap-2 mt-6 flex-wrap px-4">

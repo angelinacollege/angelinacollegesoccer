@@ -70,12 +70,8 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Brand / Logo -->
                 <a href="#hero" class="flex items-center space-x-3 group">
-                    <div class="w-12 h-12 rounded-xl bg-acBlue flex items-center justify-center p-2 shadow-lg group-hover:bg-acOrange transition-colors duration-300">
-                        <!-- Custom SVG Roadrunner Mascot Icon -->
-                        <img src="AC Logos.png" alt="Logo" class="w-full h-full fill-current">
-                            <path d="M15 65 Q 35 25, 60 20 C 75 15, 85 25, 90 35 C 80 32, 70 38, 65 45 C 75 42, 88 48, 82 60 C 72 55, 62 60, 50 65 L 75 75 L 55 78 L 30 70 Z"/>
-                            <circle cx="70" cy="30" r="4" fill="#ff6700"/>
-                        </img>
+                    <div class="w-12 h-12 rounded-xl bg-acBlue flex items-center justify-center p-1.5 shadow-lg group-hover:bg-acOrange transition-colors duration-300">
+                        <img src="AC Logos.png" alt="Angelina College Logo" class="w-full h-full object-contain">
                     </div>
                     <div>
                         <span class="block text-xl font-extrabold tracking-wider text-white group-hover:text-acOrange transition-colors">ANGELINA COLLEGE</span>
@@ -116,6 +112,7 @@
     </header>
 
     <main class="flex-grow">
+        <!-- Hero Section -->
         <section id="hero" class="relative hero-gradient py-24 lg:py-32 overflow-hidden border-b border-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="max-w-3xl">
@@ -129,7 +126,7 @@
                         <span class="text-acOrange">PASSION.</span>
                     </h1>
                     <p class="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
-                        Angelina College Men's Soccer is committed to elite athletic competition, player development, and academic success in Lufkin, Texas. We bridge talent to top NCAA Division I, II, and Professional ranks.
+                        Unlocking athletic potential through elite technical instruction, high-performance tactical mastery, specialized training, and direct pathways to top college and professional soccer programs.
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <a href="#next-level" class="px-6 py-3.5 bg-acOrange hover:bg-acOrangeHover text-white font-bold rounded-xl shadow-lg transition-all flex items-center space-x-2">
@@ -165,6 +162,7 @@
             </div>
         </section>
 
+        <!-- Why AC Section -->
         <section id="why-ac" class="py-20 bg-acDarkBg border-b border-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
@@ -187,7 +185,7 @@
                             <i class="fa-solid fa-bullseye"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-3">Pro Pathways</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">Proven track record of placing players into professional leagues (USL Championship, European leagues) and top NCAA Division I rosters.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Proven track record of placing players into professional leagues and top NCAA Division I rosters.</p>
                     </div>
 
                     <div class="bg-acCardBg p-8 rounded-2xl border border-gray-800 card-glow transition-all">
@@ -201,6 +199,7 @@
             </div>
         </section>
 
+        <!-- Champions Section -->
         <section id="champions" class="py-20 bg-acCardBg border-b border-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="bg-gradient-to-r from-acBlue/20 via-acCardBg to-acOrange/20 rounded-3xl p-8 sm:p-12 border border-gray-700 shadow-2xl relative overflow-hidden">
@@ -245,6 +244,7 @@
             </div>
         </section>
 
+        <!-- Next Level Section -->
         <section id="next-level" class="py-20 bg-acDarkBg border-b border-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12">
@@ -256,7 +256,6 @@
 
                 <!-- Search and Filter Controls -->
                 <div class="mb-10 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <!-- Filter Buttons -->
                     <div class="flex flex-wrap justify-center gap-2" id="filter-container">
                         <button class="filter-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-acBlue text-white shadow-md" data-filter="all">All Athletes</button>
                         <button class="filter-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-acCardBg text-gray-300 hover:text-white hover:bg-gray-800 border border-gray-800" data-filter="d1">NCAA D1</button>
@@ -264,7 +263,6 @@
                         <button class="filter-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-acCardBg text-gray-300 hover:text-white hover:bg-gray-800 border border-gray-800" data-filter="pro">Professional</button>
                     </div>
 
-                    <!-- Search Input -->
                     <div class="relative w-full md:w-72">
                         <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500"></i>
                         <input type="text" id="player-search" placeholder="Search player or team..." class="w-full bg-acCardBg text-white placeholder-gray-500 pl-10 pr-4 py-2.5 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm transition-colors" />
@@ -272,11 +270,8 @@
                 </div>
 
                 <!-- Player Cards Grid -->
-                <div id="player-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Dynamic Javascript population of player cards -->
-                </div>
+                <div id="player-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
-                <!-- Empty state message -->
                 <div id="no-results" class="hidden text-center py-12">
                     <i class="fa-solid fa-user-slash text-4xl text-gray-600 mb-3"></i>
                     <p class="text-gray-400">No players found matching your criteria.</p>
@@ -284,6 +279,7 @@
             </div>
         </section>
 
+        <!-- Housing Section -->
         <section id="housing" class="py-20 bg-acCardBg border-b border-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
@@ -293,7 +289,6 @@
                     <p class="text-gray-400 text-lg">Safe, supportive, and convenient modern living facilities right on campus in Lufkin.</p>
                 </div>
 
-                <!-- Housing Breakdown Grid -->
                 <div class="grid lg:grid-cols-12 gap-8 mb-16">
                     <!-- Important Move-In Dates -->
                     <div class="lg:col-span-5 bg-acDarkBg p-8 rounded-2xl border border-gray-800">
@@ -303,7 +298,7 @@
                         </h3>
                         <ul class="space-y-4 text-sm">
                             <li class="flex items-start justify-between pb-3 border-b border-gray-800">
-                                <span class="font-medium text-gray-300">Early Check-In (Athletes/Staff)</span>
+                                <span class="font-medium text-gray-300">Early Check-In (Athletes)</span>
                                 <span class="text-acBlueLight font-semibold">July 27 – Aug 1</span>
                             </li>
                             <li class="flex items-start justify-between pb-3 border-b border-gray-800">
@@ -325,7 +320,7 @@
                         </ul>
                     </div>
 
-                    <!-- Clear Cost Breakdown Cards -->
+                    <!-- Cost Breakdown -->
                     <div class="lg:col-span-7 space-y-4">
                         <h3 class="text-xl font-bold text-white mb-2 flex items-center space-x-3">
                             <i class="fa-solid fa-file-invoice-dollar text-acBlueLight"></i>
@@ -352,40 +347,12 @@
                             </div>
                         </div>
 
-                        <!-- Full Year Total Highlight -->
                         <div class="bg-acBlue/10 border border-acBlue/40 p-6 rounded-2xl flex items-center justify-between">
                             <div>
                                 <span class="block text-sm font-semibold text-acBlueLight">Full Academic Year Total</span>
                                 <span class="block text-xs text-gray-400">Includes complete room & full board dining plan</span>
                             </div>
                             <div class="text-2xl sm:text-3xl font-black text-white">$7,660</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- How to Apply Steps -->
-                <div class="bg-acDarkBg p-8 rounded-2xl border border-gray-800 mb-12">
-                    <h3 class="text-xl font-bold text-white mb-6">4 Steps to Apply for Housing</h3>
-                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="space-y-2">
-                            <span class="w-8 h-8 rounded-lg bg-acBlue text-white font-bold flex items-center justify-center text-sm">1</span>
-                            <h4 class="font-semibold text-white">Submit Admissions</h4>
-                            <p class="text-xs text-gray-400">Apply to Angelina College and obtain your AC Student ID.</p>
-                        </div>
-                        <div class="space-y-2">
-                            <span class="w-8 h-8 rounded-lg bg-acBlue text-white font-bold flex items-center justify-center text-sm">2</span>
-                            <h4 class="font-semibold text-white">Log into Portal</h4>
-                            <p class="text-xs text-gray-400">Access the AC Student Housing Application portal online.</p>
-                        </div>
-                        <div class="space-y-2">
-                            <span class="w-8 h-8 rounded-lg bg-acBlue text-white font-bold flex items-center justify-center text-sm">3</span>
-                            <h4 class="font-semibold text-white">Pay Deposit</h4>
-                            <p class="text-xs text-gray-400">Pay required $100 room deposit to reserve your dorm spot.</p>
-                        </div>
-                        <div class="space-y-2">
-                            <span class="w-8 h-8 rounded-lg bg-acBlue text-white font-bold flex items-center justify-center text-sm">4</span>
-                            <h4 class="font-semibold text-white">Confirm Room</h4>
-                            <p class="text-xs text-gray-400">Receive room assignment and finalize move-in check-in time.</p>
                         </div>
                     </div>
                 </div>
@@ -416,6 +383,7 @@
             </div>
         </section>
 
+        <!-- Facilities Section -->
         <section id="facilities" class="py-20 bg-acDarkBg border-b border-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
@@ -437,192 +405,203 @@
                             <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-acBlueLight"></i><span>On-site Athletic Training & Recovery Center</span></li>
                         </ul>
                     </div>
-                    <div class="bg-gray-800 min-h-[300px] lg:min-h-full relative flex items-center justify-center p-8 bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(33,33,33,0.9), rgba(33,33,33,0.4)), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80');">
-                        <div class="text-center">
-                            <i class="fa-solid fa-stadium-steppers text-5xl text-acBlueLight mb-3"></i>
-                            <div class="text-white font-bold text-xl">Larry Phillips Sports Complex</div>
-                            <div class="text-gray-300 text-xs mt-1">Lufkin, Texas</div>
+                    
+                    <!-- Updated Image Tag for Housing Facilities -->
+                    <div class="relative min-h-[300px] lg:min-h-full overflow-hidden group">
+                        <img src="housing-facilities.jpg" alt="Angelina College Athlete Housing & Facilities" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                            <div>
+                                <div class="text-white font-bold text-xl">Larry Phillips Sports Complex</div>
+                                <div class="text-acBlueLight text-xs mt-0.5">Lufkin, Texas</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Resources Section -->
         <section id="resources" class="py-20 bg-acCardBg border-b border-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-tight mb-4">External Resources</h2>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-tight mb-4">External Resources & Links</h2>
                     <div class="h-1 w-20 bg-acOrange mx-auto rounded-full mb-6"></div>
-                    <p class="text-gray-400 text-lg">Explore campus life, academics, and our home city of Lufkin, Texas.</p>
+                    <p class="text-gray-400 text-lg">Official portals and resources for Angelina College athletes.</p>
                 </div>
 
-                <div class="grid sm:grid-cols-3 gap-6">
-                    <a href="https://www.angelina.edu/visitors/" target="_blank" rel="noopener noreferrer" class="bg-acDarkBg p-6 rounded-2xl border border-gray-800 card-glow transition-all group">
-                        <div class="w-12 h-12 bg-acBlue/20 text-acBlueLight rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-acBlue group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-vr-cardboard"></i>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="https://angelina.edu" target="_blank" rel="noopener noreferrer" class="bg-acDarkBg p-6 rounded-2xl border border-gray-800 hover:border-acBlue transition-all flex items-center justify-between group">
+                        <div class="flex items-center space-x-4">
+                            <i class="fa-solid fa-building-columns text-2xl text-acBlueLight"></i>
+                            <div>
+                                <h4 class="font-bold text-white group-hover:text-acBlueLight transition-colors">AC Main Site</h4>
+                                <p class="text-xs text-gray-400">angelina.edu</p>
+                            </div>
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-acBlueLight transition-colors">Virtual Campus Tour <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Take an interactive tour of the Angelina College main campus and facilities.</p>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-white transition-colors"></i>
                     </a>
 
-                    <a href="https://www.angelina.edu/academic-schools/" target="_blank" rel="noopener noreferrer" class="bg-acDarkBg p-6 rounded-2xl border border-gray-800 card-glow transition-all group">
-                        <div class="w-12 h-12 bg-acOrange/20 text-acOrange rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-acOrange group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-book-bookmark"></i>
+                    <a href="https://angelinaathletics.com" target="_blank" rel="noopener noreferrer" class="bg-acDarkBg p-6 rounded-2xl border border-gray-800 hover:border-acOrange transition-all flex items-center justify-between group">
+                        <div class="flex items-center space-x-4">
+                            <i class="fa-solid fa-futbol text-2xl text-acOrange"></i>
+                            <div>
+                                <h4 class="font-bold text-white group-hover:text-acOrange transition-colors">Athletics Hub</h4>
+                                <p class="text-xs text-gray-400">angelinaathletics.com</p>
+                            </div>
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-acOrange transition-colors">Academic Programs <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Discover majors, associate degrees, and transfer paths offered at AC.</p>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-white transition-colors"></i>
                     </a>
 
-                    <a href="https://www.visitlufkin.com/" target="_blank" rel="noopener noreferrer" class="bg-acDarkBg p-6 rounded-2xl border border-gray-800 card-glow transition-all group">
-                        <div class="w-12 h-12 bg-acBlue/20 text-acBlueLight rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-acBlue group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-map-location-dot"></i>
+                    <a href="https://njcaa.org" target="_blank" rel="noopener noreferrer" class="bg-acDarkBg p-6 rounded-2xl border border-gray-800 hover:border-acBlue transition-all flex items-center justify-between group">
+                        <div class="flex items-center space-x-4">
+                            <i class="fa-solid fa-shield-halved text-2xl text-acBlueLight"></i>
+                            <div>
+                                <h4 class="font-bold text-white group-hover:text-acBlueLight transition-colors">NJCAA Official</h4>
+                                <p class="text-xs text-gray-400">njcaa.org</p>
+                            </div>
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-acBlueLight transition-colors">Explore Lufkin, TX <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Learn about dining, outdoor activities, and life in the heart of East Texas.</p>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-gray-500 group-hover:text-white transition-colors"></i>
                     </a>
                 </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="py-20 bg-acDarkBg">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-gradient-to-br from-acCardBg via-acDarkBg to-acCardBg rounded-3xl p-8 sm:p-12 border border-gray-800 text-center max-w-4xl mx-auto">
-                    <span class="text-acOrange font-bold text-sm uppercase tracking-wider mb-2 block">Recruiting & Information</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Connect with Men's Soccer</h2>
-                    <p class="text-gray-400 max-w-xl mx-auto mb-8 text-sm">Are you an aspiring athlete ready to take your game to the next level? Contact our coaching staff today.</p>
-                    
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <a href="mailto:soccer@angelina.edu" class="px-8 py-4 bg-acBlue hover:bg-acBlueHover text-white font-bold rounded-xl shadow-lg transition-all flex items-center space-x-2">
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>Email Coaching Staff</span>
-                        </a>
-                        <a href="https://www.angelina.edu" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-gray-800 hover:bg-gray-700 border border-gray-700 text-white font-bold rounded-xl transition-all flex items-center space-x-2">
-                            <i class="fa-solid fa-globe"></i>
-                            <span>Official AC Athletics Site</span>
-                        </a>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span class="text-acOrange font-bold text-sm tracking-widest uppercase mb-2 block">Recruiting & Information</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight mb-4">Get In Touch</h2>
+                <div class="h-1 w-20 bg-acBlue mx-auto rounded-full mb-8"></div>
+                <p class="text-gray-400 text-lg mb-12">Interested in joining the Angelina College Men's Soccer Program? Contact our coaching staff today.</p>
+
+                <form class="bg-acCardBg p-8 sm:p-10 rounded-3xl border border-gray-800 text-left space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">First & Last Name</label>
+                            <input type="text" required placeholder="John Doe" class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Email Address</label>
+                            <input type="email" required placeholder="player@example.com" class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm">
+                        </div>
                     </div>
-                </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Primary Position & Grad Year</label>
+                        <input type="text" placeholder="Midfielder - 2026" class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Message / Video Link</label>
+                        <textarea rows="4" placeholder="Share your experience, highlight video, or questions..." class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-acOrange hover:bg-acOrangeHover text-white font-bold rounded-xl shadow-lg transition-all text-sm uppercase tracking-wider">
+                        Send Message to Coaching Staff
+                    </button>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer class="bg-black py-8 border-t border-gray-800 text-xs text-gray-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-                &copy; <span id="year"></span> Angelina College Athletics. All Rights Reserved.
+    <footer class="bg-black border-t border-gray-900 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+            <div class="flex items-center space-x-2">
+                <img src="AC Logos.png" alt="AC Logo" class="w-6 h-6 object-contain">
+                <span>© 2026 Angelina College Men's Soccer Program. All rights reserved.</span>
             </div>
-            <div class="flex space-x-6">
-                <span>Lufkin, Texas</span>
-                <span>NJCAA Region 14</span>
-            </div>
+            <div>3500 S First St, Lufkin, TX 75901</div>
         </div>
     </footer>
 
+    <!-- JavaScript logic for mobile menu & player card search/filters -->
     <script>
-        // Exact player data set as requested
-        const PLAYERS = [
-            { name: "Jacob Blach", team: "UC Santa Barbara", type: "d1", tag: "NCAA D1", avatar: "JB" },
-            { name: "Abdallah Traore", team: "CSUN / Memphis", type: "d1", tag: "NCAA D1", avatar: "AT" },
-            { name: "Luan Rangel", team: "UT Tyler", type: "d2", tag: "NCAA D2", avatar: "LR" },
-            { name: "Omar Mora", team: "El Paso Locomotive", type: "pro", tag: "Pro", avatar: "OM" },
-            { name: "Kaito Ueki", team: "Coastal Carolina / Omaha", type: "d1", tag: "NCAA D1", avatar: "KU" },
-            { name: "Viktor Hojbjerg", team: "Aarhus Fremad", type: "pro", tag: "Pro", avatar: "VH" },
-            { name: "Jaheim Brown", team: "One Knoxville", type: "pro", tag: "Pro", avatar: "JB" },
-            { name: "Anders Hauge", team: "UIW", type: "d1", tag: "NCAA D1", avatar: "AH" },
-            { name: "Lamonth Rochester", team: "Chicago Fire", type: "pro", tag: "Pro", avatar: "LR" },
-            { name: "Rochaine Baker", type: "d1", team: "UIW", tag: "NCAA D1", avatar: "RB" },
-            { name: "Josmy Ngandola", team: "Georgia State", type: "d1", tag: "NCAA D1", avatar: "JN" }
+        // Sample player data array
+        const players = [
+            { name: "Carlos Ramos", level: "d1", school: "UL Monroe (NCAA D1)", pos: "Forward", year: "2023 Transfer" },
+            { name: "Diego Gutierrez", level: "d1", school: "Houston Christian (NCAA D1)", pos: "Midfielder", year: "2023 Transfer" },
+            { name: "Lucas Silva", level: "d2", school: "UT Tyler (NCAA D2)", pos: "Defender", year: "2024 Transfer" },
+            { name: "Mateo Fernandez", level: "pro", school: "Rio Grande Valley FC (USL)", pos: "Winger", year: "2022 Alumni" },
+            { name: "Andre Santos", level: "d2", school: "Midwestern State (NCAA D2)", pos: "Goalkeeper", year: "2023 Transfer" },
+            { name: "Gabriel Morales", level: "pro", school: "Forward Madison FC (USL1)", pos: "Defender", year: "2021 Alumni" }
         ];
 
-        let currentFilter = 'all';
-        let searchQuery = '';
-
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Render player cards
-        function renderPlayers() {
+        function renderPlayers(items) {
             const grid = document.getElementById('player-grid');
-            const noResults = document.getElementById('no-results');
-            
-            const filtered = PLAYERS.filter(player => {
-                const matchesFilter = currentFilter === 'all' || player.type === currentFilter;
-                const matchesSearch = player.name.toLowerCase().includes(searchQuery) || player.team.toLowerCase().includes(searchQuery);
-                return matchesFilter && matchesSearch;
-            });
-
+            const noRes = document.getElementById('no-results');
             grid.innerHTML = '';
-
-            if (filtered.length === 0) {
-                noResults.classList.remove('hidden');
-            } else {
-                noResults.classList.add('hidden');
-                filtered.forEach(player => {
-                    const isPro = player.type === 'pro';
-                    const badgeClass = isPro ? 'bg-acOrange/20 text-acOrange border-acOrange/30' : 'bg-acBlue/20 text-acBlueLight border-acBlue/30';
-                    
-                    const cardHtml = `
-                        <div class="bg-acCardBg p-6 rounded-2xl border border-gray-800 card-glow transition-all flex items-center space-x-4">
-                            <div class="w-14 h-14 rounded-full bg-gray-800 border-2 border-acBlue flex items-center justify-center font-bold text-lg text-white flex-shrink-0 shadow-inner">
-                                ${player.avatar}
-                            </div>
-                            <div class="flex-grow min-w-0">
-                                <div class="flex items-center justify-between gap-2 mb-1">
-                                    <h3 class="text-base font-bold text-white truncate">${player.name}</h3>
-                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold border uppercase ${badgeClass}">
-                                        ${player.tag}
-                                    </span>
-                                </div>
-                                <p class="text-xs text-gray-400 truncate flex items-center space-x-1">
-                                    <i class="fa-solid fa-arrow-right-to-bracket text-acBlueLight text-[10px]"></i>
-                                    <span>${player.team}</span>
-                                </p>
-                            </div>
-                        </div>
-                    `;
-                    grid.innerHTML += cardHtml;
-                });
+            
+            if (items.length === 0) {
+                noRes.classList.remove('hidden');
+                return;
             }
+            noRes.classList.add('hidden');
+
+            items.forEach(p => {
+                const badgeColor = p.level === 'd1' ? 'bg-acBlue/20 text-acBlueLight' : p.level === 'd2' ? 'bg-purple-500/20 text-purple-400' : 'bg-acOrange/20 text-acOrange';
+                const card = `
+                    <div class="bg-acCardBg border border-gray-800 rounded-2xl p-6 card-glow transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="text-xs font-bold px-3 py-1 rounded-full ${badgeColor} uppercase tracking-wider">${p.level.toUpperCase()}</span>
+                                <span class="text-xs text-gray-500">${p.year}</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-1">${p.name}</h3>
+                            <p class="text-sm text-acBlueLight font-semibold mb-3">${p.school}</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-800/60 flex justify-between items-center text-xs text-gray-400">
+                            <span>Position:</span>
+                            <span class="text-white font-medium">${p.pos}</span>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
         }
 
-        // Initialize Filter Buttons
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                document.querySelectorAll('.filter-btn').forEach(b => {
-                    b.classList.remove('bg-acBlue', 'text-white');
-                    b.classList.add('bg-acCardBg', 'text-gray-300', 'border', 'border-gray-800');
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPlayers(players);
+
+            // Mobile menu toggle
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Filter buttons
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-acBlue', 'text-white');
+                        b.classList.add('bg-acCardBg', 'text-gray-300');
+                    });
+                    btn.classList.remove('bg-acCardBg', 'text-gray-300');
+                    btn.classList.add('bg-acBlue', 'text-white');
+
+                    const filter = btn.dataset.filter;
+                    const searchVal = document.getElementById('player-search').value.toLowerCase();
+                    
+                    const filtered = players.filter(p => {
+                        const matchesFilter = filter === 'all' || p.level === filter;
+                        const matchesSearch = p.name.toLowerCase().includes(searchVal) || p.school.toLowerCase().includes(searchVal);
+                        return matchesFilter && matchesSearch;
+                    });
+                    renderPlayers(filtered);
                 });
+            });
 
-                e.target.classList.remove('bg-acCardBg', 'text-gray-300', 'border', 'border-gray-800');
-                e.target.classList.add('bg-acBlue', 'text-white');
+            // Search input
+            document.getElementById('player-search').addEventListener('input', (e) => {
+                const searchVal = e.target.value.toLowerCase();
+                const activeFilter = document.querySelector('.filter-btn.bg-acBlue').dataset.filter;
 
-                currentFilter = e.target.getAttribute('data-filter');
-                renderPlayers();
+                const filtered = players.filter(p => {
+                    const matchesFilter = activeFilter === 'all' || p.level === activeFilter;
+                    const matchesSearch = p.name.toLowerCase().includes(searchVal) || p.school.toLowerCase().includes(searchVal);
+                    return matchesFilter && matchesSearch;
+                });
+                renderPlayers(filtered);
             });
         });
-
-        // Search Input Handler
-        document.getElementById('player-search').addEventListener('input', (e) => {
-            searchQuery = e.target.value.toLowerCase().trim();
-            renderPlayers();
-        });
-
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu on click link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Initial render
-        renderPlayers();
     </script>
 </body>
 </html>

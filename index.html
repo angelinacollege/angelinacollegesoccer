@@ -597,6 +597,89 @@
             <!-- Dots Indicators Container -->
             <div id="player-slider-dots" class="flex justify-center items-center gap-2 mt-6 flex-wrap px-4">
                 <!-- Javascript populates 14 indicator dots here -->
+                <script>
+    let currentSlide = 0;
+    const totalSlides = 14;
+    let autoSlideInterval = null;
+
+    // Initialize dots and listeners
+    document.addEventListener("DOMContentLoaded", function() {
+        const dotsContainer = document.getElementById("player-slider-dots");
+        if (dotsContainer) {
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement("button");
+                dot.type = "button";
+                dot.setAttribute("aria-label", `Go to player slide ${i + 1}`);
+                dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === 0 ? 'bg-orangeAccent-400 w-6' : 'bg-neutral-700 hover:bg-slate-400'}`;
+                dot.onclick = () => goToPlayerSlide(i);
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        // Auto-slide playback
+        startAutoSlide();
+
+        // Pause auto-slide on hover
+        const sliderContainer = document.getElementById("player-slider-container");
+        if (sliderContainer) {
+            sliderContainer.addEventListener("mouseenter", stopAutoSlide);
+            sliderContainer.addEventListener("mouseleave", startAutoSlide);
+        }
+    });
+
+    function updateSlidePosition() {
+        const track = document.getElementById("player-slides-track");
+        const slideNum = document.getElementById("current-slide-num");
+        const dotsContainer = document.getElementById("player-slider-dots");
+
+        if (track) {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        if (slideNum) {
+            slideNum.textContent = currentSlide + 1;
+        }
+
+        if (dotsContainer) {
+            const dots = dotsContainer.children;
+            for (let i = 0; i < dots.length; i++) {
+                if (i === currentSlide) {
+                    dots[i].className = "w-6 h-2.5 rounded-full bg-orangeAccent-400 transition-all duration-300";
+                } else {
+                    dots[i].className = "w-2.5 h-2.5 rounded-full bg-neutral-700 hover:bg-slate-400 transition-all duration-300";
+                }
+            }
+        }
+    }
+
+    function goToPlayerSlide(index) {
+        currentSlide = index;
+        updateSlidePosition();
+    }
+
+    function nextPlayerSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlidePosition();
+    }
+
+    function prevPlayerSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlidePosition();
+    }
+
+    function startAutoSlide() {
+        stopAutoSlide();
+        autoSlideInterval = setInterval(nextPlayerSlide, 5000);
+    }
+
+    function stopAutoSlide() {
+        if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = null;
+        }
+    }
+</script>
             </div>
         </div>
     </div>

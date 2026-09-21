@@ -494,7 +494,7 @@
         <div class="relative max-w-4xl mx-auto" id="player-slider-container">
             <!-- Counter Badge -->
             <div class="absolute -top-10 right-0 z-20 px-3 py-1 rounded-full bg-neutral-800 border border-neutral-700 text-xs text-slate-300 font-mono">
-                <span id="current-slide-num" class="text-orange-400 font-bold">1</span> / 14
+                <span id="current-slide-num" class="text-orange-400 font-bold">1</span> / 11
             </div>
 
             <!-- Slide Nav Button: Previous -->
@@ -846,7 +846,7 @@
             const dots = dotsContainer.children;
             for (let i = 0; i < dots.length; i++) {
                 if (i === currentSlide) {
-                    dots[i].className = "h-2.5 rounded-full bg-orange-500 w-6 transition-all duration-300";
+                    dots[i].className = "h-2.5 rounded-full bg-orange-500 w-6 transition-all duration-700";
                 } else {
                     dots[i].className = "h-2.5 rounded-full bg-neutral-700 w-2.5 hover:bg-slate-400 transition-all duration-300";
                 }

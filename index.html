@@ -297,7 +297,7 @@
 
                     <!-- Slide 5 -->
                     <div style="width: 20%; height: 100%; position: relative; flex-shrink: 0; cursor: pointer;" onclick="openLightbox('champs-1.png')">
-                        <img src="champs-1.png" alt="Championship Match Action" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                        <img src="champs-3.png" alt="Championship Match Action" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
                         <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);"></div>
                         <div style="position: absolute; bottom: 2rem; left: 1.5rem; right: 1.5rem;">
                             <span style="background-color: #ff6700; color: #ffffff; padding: 0.25rem 0.625rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;">
@@ -1071,31 +1071,39 @@
         </section>
 
         <!-- Facilities Section -->
-        <section id="facilities" class="py-20 bg-acDarkBg border-b border-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-tight mb-4">World-Class Athletics Facilities</h2>
-                    <div class="h-1 w-20 bg-acBlue mx-auto rounded-full mb-6"></div>
-                    <p class="text-gray-400 text-lg">Invested in student-athlete performance and athletic excellence.</p>
-                </div>
+<section id="facilities" class="py-20 bg-acDarkBg border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-tight mb-4">World-Class Athletics Facilities</h2>
+            <div class="h-1 w-20 bg-acBlue mx-auto rounded-full mb-6"></div>
+            <p class="text-gray-400 text-lg">Invested in student-athlete performance and athletic excellence.</p>
+        </div>
 
-                <div class="bg-acCardBg rounded-3xl border border-gray-800 overflow-hidden grid lg:grid-cols-2 gap-0">
-                    <div class="p-8 sm:p-12 flex flex-col justify-center">
-                        <span class="text-xs font-bold text-acOrange uppercase tracking-wider mb-2">Larry Phillips Sports Complex</span>
-                        <h3 class="text-3xl font-extrabold text-white mb-4">$4M Soccer Stadium & Facility</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
-                            Opened in September 2022, our state-of-the-art soccer stadium features high-grade natural turf, championship LED stadium lighting, covered player benches, modern press box, and dedicated varsity locker suites.
-                        </p>
-                        <ul class="space-y-3 text-sm text-gray-400 mb-8">
-                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-acBlueLight"></i><span>Full LED Night Match Lighting</span></li>
-                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-acBlueLight"></i><span>Custom Varsity Team Locker Suites</span></li>
-                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-acBlueLight"></i><span>On-site Athletic Training & Recovery Center</span></li>
-                        </ul>
-                    </div>
+        <div class="bg-acCardBg rounded-3xl border border-gray-800 overflow-hidden grid lg:grid-cols-2 gap-0">
+            <div class="p-8 sm:p-12 flex flex-col justify-center">
+                <span class="text-xs font-bold text-acOrange uppercase tracking-wider mb-2">Larry Phillips Sports Complex</span>
+                <h3 class="text-3xl font-extrabold text-white mb-4">$4M Soccer Stadium & Facility</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                    Opened in September 2022, our state-of-the-art soccer stadium features high-grade natural turf, championship LED stadium lighting, covered player benches, modern press box, and dedicated varsity locker suites.
+                </p>
+                <ul class="space-y-3 text-sm text-gray-400 mb-8">
+                    <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-acBlueLight"></i><span>Full LED Night Match Lighting</span></li>
+                    <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-acBlueLight"></i><span>Custom Varsity Team Locker Suites</span></li>
+                    <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-acBlueLight"></i><span>On-site Athletic Training & Recovery Center</span></li>
+                </ul>
+            </div>
+            
+            <!-- 5-Picture Interactive Carousel -->
+            <div class="relative min-h-[350px] lg:min-h-full overflow-hidden group"
+                 onmouseenter="pauseFacilityCarousel()" 
+                 onmouseleave="resumeFacilityCarousel()">
+                
+                <!-- Carousel Track -->
+                <div id="facility-carousel-track" style="display: flex; transition: transform 500ms ease-in-out; height: 100%; width: 500%;">
                     
-                    <!-- Updated Image Tag for Housing Facilities -->
-                    <div class="relative min-h-[300px] lg:min-h-full overflow-hidden group">
-                        <img src="housing-facilities.jpg" alt="Angelina College Athlete Housing & Facilities" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                    <!-- Slide 1 -->
+                    <div style="width: 20%; height: 100%; position: relative; flex-shrink: 0;" onclick="openLightbox('housing-facilities.jpg')">
+                        <img src="housing-facilities.jpg" alt="Larry Phillips Sports Complex" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
                             <div>
                                 <div class="text-white font-bold text-xl">Larry Phillips Sports Complex</div>
@@ -1103,10 +1111,121 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
+                    <!-- Slide 2 -->
+                    <div style="width: 20%; height: 100%; position: relative; flex-shrink: 0;" onclick="openLightbox('stadium-view.jpg')">
+                        <img src="stadium-view.jpg" alt="Stadium Field & Turf" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                            <div>
+                                <div class="text-white font-bold text-xl">Championship Turf Match Pitch</div>
+                                <div class="text-acBlueLight text-xs mt-0.5">NCAA & NJCAA Standard Dimensions</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div style="width: 20%; height: 100%; position: relative; flex-shrink: 0;" onclick="openLightbox('locker-room.jpg')">
+                        <img src="locker-room.jpg" alt="Varsity Team Locker Suites" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                            <div>
+                                <div class="text-white font-bold text-xl">Varsity Locker Suites</div>
+                                <div class="text-acBlueLight text-xs mt-0.5">Custom Player Lockers & Media Setup</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div style="width: 20%; height: 100%; position: relative; flex-shrink: 0;" onclick="openLightbox('training-facility.jpg')">
+                        <img src="training-facility.jpg" alt="Athletic Training Center" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                            <div>
+                                <div class="text-white font-bold text-xl">Training & Recovery Hub</div>
+                                <div class="text-acBlueLight text-xs mt-0.5">Full-Time Sports Medicine Staff</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div style="width: 20%; height: 100%; position: relative; flex-shrink: 0;" onclick="openLightbox('night-lights.jpg')">
+                        <img src="night-lights.jpg" alt="LED Night Match Lighting" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                            <div>
+                                <div class="text-white font-bold text-xl">Championship Night Lighting</div>
+                                <div class="text-acBlueLight text-xs mt-0.5">Broadcast-Ready LED System</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Navigation Arrow Left -->
+                <button onclick="prevFacilitySlide()" 
+                        aria-label="Previous Slide"
+                        style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 2.5rem; height: 2.5rem; border-radius: 9999px; background-color: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <!-- Navigation Arrow Right -->
+                <button onclick="nextFacilitySlide()" 
+                        aria-label="Next Slide"
+                        style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); width: 2.5rem; height: 2.5rem; border-radius: 9999px; background-color: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <!-- Carousel Dot Indicators -->
+                <div style="position: absolute; bottom: 0.75rem; right: 1.5rem; display: flex; gap: 0.5rem; z-index: 20;">
+                    <button onclick="goToFacilitySlide(0)" class="fac-dot" style="width: 0.625rem; height: 0.625rem; border-radius: 9999px; background-color: #ff6700; border: none; cursor: pointer; transition: all 300ms;"></button>
+                    <button onclick="goToFacilitySlide(1)" class="fac-dot" style="width: 0.625rem; height: 0.625rem; border-radius: 9999px; background-color: rgba(255,255,255,0.4); border: none; cursor: pointer; transition: all 300ms;"></button>
+                    <button onclick="goToFacilitySlide(2)" class="fac-dot" style="width: 0.625rem; height: 0.625rem; border-radius: 9999px; background-color: rgba(255,255,255,0.4); border: none; cursor: pointer; transition: all 300ms;"></button>
+                    <button onclick="goToFacilitySlide(3)" class="fac-dot" style="width: 0.625rem; height: 0.625rem; border-radius: 9999px; background-color: rgba(255,255,255,0.4); border: none; cursor: pointer; transition: all 300ms;"></button>
+                    <button onclick="goToFacilitySlide(4)" class="fac-dot" style="width: 0.625rem; height: 0.625rem; border-radius: 9999px; background-color: rgba(255,255,255,0.4); border: none; cursor: pointer; transition: all 300ms;"></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Facility Carousel JavaScript Helper (Add before </body> tag if needed) -->
+<script>
+    let currentFacIndex = 0;
+    const totalFacSlides = 5;
+    let facInterval = setInterval(nextFacilitySlide, 4000);
+
+    function updateFacilityCarousel() {
+        const track = document.getElementById('facility-carousel-track');
+        if (track) {
+            track.style.transform = `translateX(-${currentFacIndex * 20}%)`;
+        }
+        const dots = document.querySelectorAll('.fac-dot');
+        dots.forEach((dot, index) => {
+            dot.style.backgroundColor = index === currentFacIndex ? '#ff6700' : 'rgba(255,255,255,0.4)';
+        });
+    }
+
+    function nextFacilitySlide() {
+        currentFacIndex = (currentFacIndex + 1) % totalFacSlides;
+        updateFacilityCarousel();
+    }
+
+    function prevFacilitySlide() {
+        currentFacIndex = (currentFacIndex - 1 + totalFacSlides) % totalFacSlides;
+        updateFacilityCarousel();
+    }
+
+    function goToFacilitySlide(index) {
+        currentFacIndex = index;
+        updateFacilityCarousel();
+    }
+
+    function pauseFacilityCarousel() {
+        clearInterval(facInterval);
+    }
+
+    function resumeFacilityCarousel() {
+        facInterval = setInterval(nextFacilitySlide, 4000);
+    }
+</script>
         <!-- Resources Section -->
         <section id="resources" style="padding-top: 5rem; padding-bottom: 5rem; background-color: #acDarkBg; border-bottom: 1px solid #374151;">
     <div style="max-width: 80rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem;">

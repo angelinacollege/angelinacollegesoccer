@@ -200,47 +200,162 @@
         </section>
 
         <!-- Champions Section -->
-        <section id="champions" class="py-20 bg-acCardBg border-b border-gray-800">
+        <section id="champions" class="py-20 border-b border-neutral-800 bg-brandDark relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-gradient-to-r from-acBlue/20 via-acCardBg to-acOrange/20 rounded-3xl p-8 sm:p-12 border border-gray-700 shadow-2xl relative overflow-hidden">
-                    <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
-                        <div class="lg:w-1/2">
-                            <span class="inline-block px-3 py-1 bg-acOrange text-white text-xs font-bold rounded-md uppercase tracking-wider mb-4">Historic Campaign</span>
-                            <h2 class="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight mb-4">2023 Season Highlights</h2>
-                            <p class="text-gray-300 text-lg mb-8 leading-relaxed">
-                                The 2023 Roadrunners crafted an unforgettable season, dominating Region 14 with high-powered offense, disciplined defense, and unprecedented team chemistry.
-                            </p>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="bg-acDarkBg/80 p-4 rounded-xl border border-gray-800">
-                                    <div class="text-3xl font-bold text-acOrange">13-2-2</div>
-                                    <div class="text-xs text-gray-400 uppercase mt-1">Overall Record</div>
-                                </div>
-                                <div class="bg-acDarkBg/80 p-4 rounded-xl border border-gray-800">
-                                    <div class="text-3xl font-bold text-acBlueLight">62</div>
-                                    <div class="text-xs text-gray-400 uppercase mt-1">Goals Scored (3.65/gm)</div>
-                                </div>
-                                <div class="bg-acDarkBg/80 p-4 rounded-xl border border-gray-800">
-                                    <div class="text-3xl font-bold text-white">8-0-1</div>
-                                    <div class="text-xs text-gray-400 uppercase mt-1">Undefeated Home Record</div>
-                                </div>
-                                <div class="bg-acDarkBg/80 p-4 rounded-xl border border-gray-800">
-                                    <div class="text-3xl font-bold text-acOrange">7</div>
-                                    <div class="text-xs text-gray-400 uppercase mt-1">All-District Players</div>
-                                </div>
-                            </div>
-                        </div>
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brandOrange font-bold text-xs sm:text-sm tracking-widest uppercase mb-2 block">Historic Campaign</span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight font-display">2023 Champions & Legacy</h2>
+                    <div class="h-1 w-20 bg-brandOrange mx-auto rounded-full my-4"></div>
+                    <p class="text-gray-400 text-sm sm:text-base">
+                        An unforgettable season marked by tactical domination, district glory, and individual excellence across Region 14.
+                    </p>
+                </div>
 
-                        <div class="lg:w-5/12 w-full">
-                            <div class="relative bg-acDarkBg p-6 rounded-2xl border border-gray-800 shadow-inner">
-                                <div class="text-center py-6">
-                                    <i class="fa-solid fa-trophy text-6xl text-yellow-500 mb-4 animate-bounce"></i>
-                                    <h3 class="text-2xl font-bold text-white mb-2">Region 14 Contenders</h3>
-                                    <p class="text-gray-400 text-sm">Building a legacy of championships and producing elite talent year after year.</p>
-                                </div>
-                            </div>
+                <!-- Championship Key Metrics Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+                    <div class="bg-brandCard p-6 rounded-2xl border border-neutral-800 text-center">
+                        <div class="text-3xl sm:text-4xl font-black text-brandOrange font-display">13-2-2</div>
+                        <div class="text-xs sm:text-sm font-semibold text-gray-300 uppercase mt-2">Overall Record</div>
+                    </div>
+                    <div class="bg-brandCard p-6 rounded-2xl border border-neutral-800 text-center">
+                        <div class="text-3xl sm:text-4xl font-black text-brandBlueLight font-display">62</div>
+                        <div class="text-xs sm:text-sm font-semibold text-gray-300 uppercase mt-2">Goals Scored</div>
+                    </div>
+                    <div class="bg-brandCard p-6 rounded-2xl border border-neutral-800 text-center">
+                        <div class="text-3xl sm:text-4xl font-black text-white font-display">8-0-1</div>
+                        <div class="text-xs sm:text-sm font-semibold text-gray-300 uppercase mt-2">Home Record</div>
+                    </div>
+                    <div class="bg-brandCard p-6 rounded-2xl border border-neutral-800 text-center">
+                        <div class="text-3xl sm:text-4xl font-black text-brandOrange font-display">7</div>
+                        <div class="text-xs sm:text-sm font-semibold text-gray-300 uppercase mt-2">All-District Players</div>
+                    </div>
+                </div>
+
+                <!-- Comeback Highlight Card -->
+                <div class="bg-gradient-to-r from-brandBlue/30 via-brandCard to-brandCard border border-brandBlue/40 rounded-3xl p-6 sm:p-8 mb-16 shadow-2xl relative overflow-hidden">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+                        <div class="space-y-2 text-center md:text-left">
+                            <span class="inline-block px-3 py-1 bg-brandOrange/20 border border-brandOrange/40 rounded-full text-xs font-bold text-brandOrange uppercase tracking-wider">
+                                Championship Match Highlight
+                            </span>
+                            <h3 class="text-2xl sm:text-3xl font-black text-white font-display uppercase">2-1 Comeback Victory Over Tyler JC</h3>
+                            <p class="text-xs sm:text-sm text-gray-300 max-w-2xl leading-relaxed">
+                                Trailing 1-0 in the second half of the Region 14 District Final, the Roadrunners responded with two unanswered goals in the final 15 minutes to secure the Gulf South District Crown.
+                            </p>
+                        </div>
+                        <div class="shrink-0">
+                            <button onclick="openRecruitModal()" class="px-6 py-3.5 bg-brandOrange hover:bg-brandOrangeHover text-white font-extrabold rounded-xl uppercase text-xs tracking-wider shadow-lg transition-all">
+                                Be Part of the Legacy
+                            </button>
                         </div>
                     </div>
                 </div>
+
+                <!-- CHAMPIONS AUTO-ADVANCING PHOTO CAROUSEL -->
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-black text-white font-display uppercase">Championship Photo Gallery</h3>
+                            <p class="text-xs text-gray-400">Auto-advancing interactive slider. Click any image for lightbox view.</p>
+                        </div>
+                        <div class="hidden sm:flex items-center space-x-2 text-xs font-semibold text-brandBlueLight">
+                            <i class="fa-solid fa-pause"></i>
+                            <span>Hover to Pause</span>
+                        </div>
+                    </div>
+
+                    <div class="relative max-w-5xl mx-auto group">
+                        <!-- Left Navigation Arrow -->
+                        <button id="champ-prev-btn" aria-label="Previous Champion Photo" class="absolute left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-brandDark/90 border border-neutral-700 hover:border-brandOrange text-white hover:bg-brandOrange flex items-center justify-center shadow-2xl transition-all hover:scale-110 focus:outline-none">
+                            <i class="fa-solid fa-chevron-left text-lg"></i>
+                        </button>
+
+                        <!-- Right Navigation Arrow -->
+                        <button id="champ-next-btn" aria-label="Next Champion Photo" class="absolute right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-brandDark/90 border border-neutral-700 hover:border-brandOrange text-white hover:bg-brandOrange flex items-center justify-center shadow-2xl transition-all hover:scale-110 focus:outline-none">
+                            <i class="fa-solid fa-chevron-right text-lg"></i>
+                        </button>
+
+                        <!-- Carousel Viewport & Track -->
+                        <div id="champ-carousel-viewport" class="overflow-hidden rounded-3xl border border-neutral-800 bg-brandCard shadow-2xl">
+                            <div id="champ-carousel-track" class="flex slider-transition">
+                                
+                                <!-- Slide 1: Trophy Celebration -->
+                                <div class="w-full shrink-0 relative h-[380px] sm:h-[480px] cursor-pointer group/slide" onclick="openGalleryLightbox(0)">
+                                    <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=1200&q=80" 
+                                         alt="Championship Trophy Celebration" 
+                                         class="w-full h-full object-cover group-hover/slide:scale-105 transition-transform duration-700">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/30 to-transparent"></div>
+                                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-10 flex flex-col justify-end">
+                                        <span class="text-xs font-extrabold text-brandOrange uppercase tracking-widest mb-1">Region 14 Champions</span>
+                                        <h4 class="text-2xl sm:text-3xl font-black text-white font-display">Trophy Presentation & Celebration</h4>
+                                        <p class="text-xs sm:text-sm text-gray-300 mt-1">Roadrunner players lifting the Gulf South Championship Cup following their dramatic finals victory.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2: Night Match Atmosphere -->
+                                <div class="w-full shrink-0 relative h-[380px] sm:h-[480px] cursor-pointer group/slide" onclick="openGalleryLightbox(1)">
+                                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80" 
+                                         alt="Night Stadium Match Action" 
+                                         class="w-full h-full object-cover group-hover/slide:scale-105 transition-transform duration-700">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/30 to-transparent"></div>
+                                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-10 flex flex-col justify-end">
+                                        <span class="text-xs font-extrabold text-brandBlueLight uppercase tracking-widest mb-1">High Intensity</span>
+                                        <h4 class="text-2xl sm:text-3xl font-black text-white font-display">Gulf South District Championship Match</h4>
+                                        <p class="text-xs sm:text-sm text-gray-300 mt-1">Pivotal match action under stadium lights during the playoff run.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3: Team Shelters & Dugout -->
+                                <div class="w-full shrink-0 relative h-[380px] sm:h-[480px] cursor-pointer group/slide" onclick="openGalleryLightbox(2)">
+                                    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80" 
+                                         alt="Team Shelters and Pitch Setup" 
+                                         class="w-full h-full object-cover group-hover/slide:scale-105 transition-transform duration-700">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/30 to-transparent"></div>
+                                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-10 flex flex-col justify-end">
+                                        <span class="text-xs font-extrabold text-brandOrange uppercase tracking-widest mb-1">Tactical Execution</span>
+                                        <h4 class="text-2xl sm:text-3xl font-black text-white font-display">Larry Phillips Stadium Pitch & Team Benches</h4>
+                                        <p class="text-xs sm:text-sm text-gray-300 mt-1">High-performance setup and tactical sideline management on gameday.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 4: Locker Room Celebration -->
+                                <div class="w-full shrink-0 relative h-[380px] sm:h-[480px] cursor-pointer group/slide" onclick="openGalleryLightbox(3)">
+                                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1200&q=80" 
+                                         alt="Locker Room Championship Celebration" 
+                                         class="w-full h-full object-cover group-hover/slide:scale-105 transition-transform duration-700">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/30 to-transparent"></div>
+                                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-10 flex flex-col justify-end">
+                                        <span class="text-xs font-extrabold text-brandOrange uppercase tracking-widest mb-1">Team Brotherhood</span>
+                                        <h4 class="text-2xl sm:text-3xl font-black text-white font-display">Locker Room Championship Jubilation</h4>
+                                        <p class="text-xs sm:text-sm text-gray-300 mt-1">Post-game celebration honoring an unprecedented undefeated home run.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 5: Stadium Overview -->
+                                <div class="w-full shrink-0 relative h-[380px] sm:h-[480px] cursor-pointer group/slide" onclick="openGalleryLightbox(4)">
+                                    <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&w=1200&q=80" 
+                                         alt="Stadium Championship Banner Overview" 
+                                         class="w-full h-full object-cover group-hover/slide:scale-105 transition-transform duration-700">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/30 to-transparent"></div>
+                                    <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-10 flex flex-col justify-end">
+                                        <span class="text-xs font-extrabold text-brandBlueLight uppercase tracking-widest mb-1">Home Fortress</span>
+                                        <h4 class="text-2xl sm:text-3xl font-black text-white font-display">Matchday Atmosphere & Stadium Overview</h4>
+                                        <p class="text-xs sm:text-sm text-gray-300 mt-1">An impressive 8-0-1 record set on home turf in Lufkin, Texas.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Bottom Indicator Dots -->
+                        <div id="champ-carousel-dots" class="flex justify-center items-center space-x-2 mt-6">
+                            <!-- JS Generated Dots -->
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 <!-- NEXT LEVEL PLAYERS SECTION (14 PLAYERS SLIDER) -->

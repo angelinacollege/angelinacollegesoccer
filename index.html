@@ -1070,6 +1070,95 @@
         resumeHousingCarousel();
     });
 </script>
+    <!-- Housing 4-Picture Interactive Carousel -->
+            <div class="max-w-5xl mx-auto mb-16">
+                <div class="relative rounded-2xl overflow-hidden border border-gray-800 bg-acDarkBg shadow-2xl h-[380px] sm:h-[480px]"
+                     onmouseenter="pauseHousingCarousel()" 
+                     onmouseleave="resumeHousingCarousel()">
+                    
+                    <!-- Carousel Slides Track (4 Slides = 400% width) -->
+                    <div id="housing-carousel-track" class="flex transition-transform duration-500 ease-in-out h-full w-[400%]">
+                        
+                        <!-- Slide 1: Modern Dorm Suites -->
+                        <div class="w-[25%] h-full relative shrink-0 cursor-pointer" onclick="openLightbox('https://placehold.co/1200x800/1b222d/ffffff?text=Modern+Dorm+Suites')">
+                            <img src="housing-1.png" alt="Modern Dorm Suites" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/30 to-transparent"></div>
+                            <div class="absolute bottom-8 left-8 right-8">
+                                <span class="bg-[#ff6700] text-white px-3 py-1 rounded text-xs font-extrabold uppercase tracking-wider mb-2 inline-block">
+                                    Suite Living
+                                </span>
+                                <h3 class="text-2xl font-black text-white mb-1">Spacious Dorm Suites</h3>
+                                <p class="text-gray-300 text-sm max-w-xl">Fully furnished rooms equipped with high-speed Wi-Fi, personal study desks, and private bath facilities.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Student Lounge & Social Area -->
+                        <div class="w-[25%] h-full relative shrink-0 cursor-pointer" onclick="openLightbox('https://placehold.co/1200x800/2563eb/ffffff?text=Student+Lounge+%26+Recreation')">
+                            <img src="housing-2.png" alt="Student Lounge & Recreation" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/30 to-transparent"></div>
+                            <div class="absolute bottom-8 left-8 right-8">
+                                <span class="bg-[#2563eb] text-white px-3 py-1 rounded text-xs font-extrabold uppercase tracking-wider mb-2 inline-block">
+                                    Community
+                                </span>
+                                <h3 class="text-2xl font-black text-white mb-1">Student Lounge & Game Area</h3>
+                                <p class="text-gray-300 text-sm max-w-xl">Relax with teammates in shared common spaces featuring lounge seating, big-screen TVs, and gaming units.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Housing Exterior & Campus Grounds -->
+                        <div class="w-[25%] h-full relative shrink-0 cursor-pointer" onclick="openLightbox('https://placehold.co/1200x800/1b222d/ffffff?text=On-Campus+Housing+Exterior')">
+                            <img src="https://placehold.co/1200x800/1b222d/ffffff?text=On-Campus+Housing+Exterior" alt="On-Campus Housing Exterior" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/30 to-transparent"></div>
+                            <div class="absolute bottom-8 left-8 right-8">
+                                <span class="bg-[#ff6700] text-white px-3 py-1 rounded text-xs font-extrabold uppercase tracking-wider mb-2 inline-block">
+                                    Convenience
+                                </span>
+                                <h3 class="text-2xl font-black text-white mb-1">On-Campus Residence Hall</h3>
+                                <p class="text-gray-300 text-sm max-w-xl">Located just minutes from the soccer complex, dining hall, and academic buildings in Lufkin.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Study Rooms & Amenities -->
+                        <div class="w-[25%] h-full relative shrink-0 cursor-pointer" onclick="openLightbox('https://placehold.co/1200x800/2563eb/ffffff?text=Quiet+Study+Rooms+%26+Laundry')">
+                            <img src="machines.png" alt="Quiet Study Rooms & Laundry" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/30 to-transparent"></div>
+                            <div class="absolute bottom-8 left-8 right-8">
+                                <span class="bg-[#2563eb] text-white px-3 py-1 rounded text-xs font-extrabold uppercase tracking-wider mb-2 inline-block">
+                                    Academic Support
+                                </span>
+                                <h3 class="text-2xl font-black text-white mb-1">On-Site Laundry</h3>
+                                <p class="text-gray-300 text-sm max-w-xl">24/7 laundry facilities for all living residents.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Left Navigation Arrow Button -->
+                    <button onclick="prevHousingSlide()" 
+                            aria-label="Previous Housing Slide"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center hover:bg-[#ff6700] transition-all z-20">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <!-- Right Navigation Arrow Button -->
+                    <button onclick="nextHousingSlide()" 
+                            aria-label="Next Housing Slide"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center hover:bg-[#ff6700] transition-all z-20">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Carousel Dots Pagination -->
+                    <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+                        <button onclick="goToHousingSlide(0)" class="housing-dot w-2.5 h-2.5 rounded-full bg-[#ff6700] transition-all"></button>
+                        <button onclick="goToHousingSlide(1)" class="housing-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-all"></button>
+                        <button onclick="goToHousingSlide(2)" class="housing-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-all"></button>
+                        <button onclick="goToHousingSlide(3)" class="housing-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-all"></button>
+                    </div>
+
+                </div>
+            </div>
+
+
             <!-- Housing Highlights Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
                 <div class="p-6 rounded-2xl bg-[#1b222d] border border-gray-800/80">

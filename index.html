@@ -1497,89 +1497,101 @@
             <div>3500 S First St, Lufkin, TX 75901</div>
         </div>
     </footer>
+<script>
+    const players = [
+        { name: "Carlos Ramos", level: "d1", school: "UL Monroe (NCAA D1)", pos: "Forward", year: "2023 Transfer" },
+        { name: "Diego Gutierrez", level: "d1", school: "Houston Christian (NCAA D1)", pos: "Midfielder", year: "2023 Transfer" },
+        { name: "Lucas Silva", level: "d2", school: "UT Tyler (NCAA D2)", pos: "Defender", year: "2024 Transfer" },
+        { name: "Mateo Fernandez", level: "pro", school: "Rio Grande Valley FC (USL)", pos: "Winger", year: "2022 Alumni" },
+        { name: "Andre Santos", level: "d2", school: "Midwestern State (NCAA D2)", pos: "Goalkeeper", year: "2023 Transfer" },
+        { name: "Gabriel Morales", level: "pro", school: "Forward Madison FC (USL1)", pos: "Defender", year: "2021 Alumni" }
+    ];
 
-    <!-- JavaScript logic for mobile menu & player card search/filters -->
-    <script>
-        // Sample player data array
-        const players = [
-            { name: "Carlos Ramos", level: "d1", school: "UL Monroe (NCAA D1)", pos: "Forward", year: "2023 Transfer" },
-            { name: "Diego Gutierrez", level: "d1", school: "Houston Christian (NCAA D1)", pos: "Midfielder", year: "2023 Transfer" },
-            { name: "Lucas Silva", level: "d2", school: "UT Tyler (NCAA D2)", pos: "Defender", year: "2024 Transfer" },
-            { name: "Mateo Fernandez", level: "pro", school: "Rio Grande Valley FC (USL)", pos: "Winger", year: "2022 Alumni" },
-            { name: "Andre Santos", level: "d2", school: "Midwestern State (NCAA D2)", pos: "Goalkeeper", year: "2023 Transfer" },
-            { name: "Gabriel Morales", level: "pro", school: "Forward Madison FC (USL1)", pos: "Defender", year: "2021 Alumni" }
-        ];
-
-        function renderPlayers(items) {
-            const grid = document.getElementById('player-grid');
-            const noRes = document.getElementById('no-results');
-            grid.innerHTML = '';
-            
-            if (items.length === 0) {
-                noRes.classList.remove('hidden');
-                return;
-            }
-            noRes.classList.add('hidden');
-
-            items.forEach(p => {
-                const badgeColor = p.level === 'd1' ? 'bg-acBlue/20 text-acBlueLight' : p.level === 'd2' ? 'bg-purple-500/20 text-purple-400' : 'bg-acOrange/20 text-acOrange';
-                const card = `
-                    <div class="bg-acCardBg border border-gray-800 rounded-2xl p-6 card-glow transition-all flex flex-col justify-between">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold px-3 py-1 rounded-full ${badgeColor} uppercase tracking-wider">${p.level.toUpperCase()}</span>
-                                <span class="text-xs text-gray-500">${p.year}</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-1">${p.name}</h3>
-                            <p class="text-sm text-acBlueLight font-semibold mb-3">${p.school}</p>
-                        </div>
-                        <div class="pt-4 border-t border-gray-800/60 flex justify-between items-center text-xs text-gray-400">
-                            <span>Position:</span>
-                            <span class="text-white font-medium">${p.pos}</span>
-                        </div>
-                    </div>
-                `;
-                grid.innerHTML += card;
-            });
+    function renderPlayers(items) {
+        const grid = document.getElementById('player-grid');
+        const noRes = document.getElementById('no-results');
+        if (!grid) return;
+        
+        grid.innerHTML = '';
+        
+        if (items.length === 0) {
+            if (noRes) noRes.classList.remove('hidden');
+            return;
         }
+        if (noRes) noRes.classList.add('hidden');
 
-        document.addEventListener('DOMContentLoaded', () => {
-            renderPlayers(players);
+        items.forEach(p => {
+            const badgeColor = p.level === 'd1' ? 'bg-acBlue/20 text-acBlueLight' : p.level === 'd2' ? 'bg-purple-500/20 text-purple-400' : 'bg-acOrange/20 text-acOrange';
+            const card = `
+                <div class="bg-acCardBg border border-gray-800 rounded-2xl p-4 sm:p-6 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full ${badgeColor} uppercase tracking-wider">${p.level.toUpperCase()}</span>
+                            <span class="text-[11px] sm:text-xs text-gray-500">${p.year}</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-0.5">${p.name}</h3>
+                        <p class="text-xs sm:text-sm text-acBlueLight font-semibold mb-3">${p.school}</p>
+                    </div>
+                    <div class="pt-3 border-t border-gray-800/60 flex justify-between items-center text-xs text-gray-400">
+                        <span>Position:</span>
+                        <span class="text-white font-medium">${p.pos}</span>
+                    </div>
+                </div>
+            `;
+            grid.innerHTML += card;
+        });
+    }
 
-            // Mobile menu toggle
-            const menuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
+    document.addEventListener('DOMContentLoaded', () => {
+        renderPlayers(players);
+
+        // Mobile menu toggle & Auto-close on tap
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuBtn && mobileMenu) {
             menuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
 
-            // Filter buttons
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    filterBtns.forEach(b => {
-                        b.classList.remove('bg-acBlue', 'text-white');
-                        b.classList.add('bg-acCardBg', 'text-gray-300');
-                    });
-                    btn.classList.remove('bg-acCardBg', 'text-gray-300');
-                    btn.classList.add('bg-acBlue', 'text-white');
-
-                    const filter = btn.dataset.filter;
-                    const searchVal = document.getElementById('player-search').value.toLowerCase();
-                    
-                    const filtered = players.filter(p => {
-                        const matchesFilter = filter === 'all' || p.level === filter;
-                        const matchesSearch = p.name.toLowerCase().includes(searchVal) || p.school.toLowerCase().includes(searchVal);
-                        return matchesFilter && matchesSearch;
-                    });
-                    renderPlayers(filtered);
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
                 });
             });
+        }
 
-            // Search input
-            document.getElementById('player-search').addEventListener('input', (e) => {
+        // Filter buttons logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-acBlue', 'text-white');
+                    b.classList.add('bg-acCardBg', 'text-gray-300');
+                });
+                btn.classList.remove('bg-acCardBg', 'text-gray-300');
+                btn.classList.add('bg-acBlue', 'text-white');
+
+                const filter = btn.dataset.filter;
+                const searchInput = document.getElementById('player-search');
+                const searchVal = searchInput ? searchInput.value.toLowerCase() : '';
+                
+                const filtered = players.filter(p => {
+                    const matchesFilter = filter === 'all' || p.level === filter;
+                    const matchesSearch = p.name.toLowerCase().includes(searchVal) || p.school.toLowerCase().includes(searchVal);
+                    return matchesFilter && matchesSearch;
+                });
+                renderPlayers(filtered);
+            });
+        });
+
+        // Search input logic
+        const searchInput = document.getElementById('player-search');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
                 const searchVal = e.target.value.toLowerCase();
-                const activeFilter = document.querySelector('.filter-btn.bg-acBlue').dataset.filter;
+                const activeBtn = document.querySelector('.filter-btn.bg-acBlue');
+                const activeFilter = activeBtn ? activeBtn.dataset.filter : 'all';
 
                 const filtered = players.filter(p => {
                     const matchesFilter = activeFilter === 'all' || p.level === activeFilter;
@@ -1588,7 +1600,8 @@
                 });
                 renderPlayers(filtered);
             });
-        });
-    </script>
+        }
+    });
+</script>
 </body>
 </html>

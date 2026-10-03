@@ -1449,38 +1449,37 @@
 </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-acDarkBg">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <span class="text-acOrange font-bold text-sm tracking-widest uppercase mb-2 block">Recruiting & Information</span>
-                <h2 class="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight mb-4">Get In Touch</h2>
-                <div class="h-1 w-20 bg-acBlue mx-auto rounded-full mb-8"></div>
-                <p class="text-gray-400 text-lg mb-12">Interested in joining the Angelina College Men's Soccer Program? Contact our coaching staff today.</p>
+        <form action="https://api.web3forms.com/submit" method="POST" class="bg-acCardBg p-8 sm:p-10 rounded-3xl border border-gray-800 text-left space-y-6">
 
-                <form class="bg-acCardBg p-8 sm:p-10 rounded-3xl border border-gray-800 text-left space-y-6">
-                    <div class="grid sm:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">First & Last Name</label>
-                            <input type="text" required placeholder="John Doe" class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Email Address</label>
-                            <input type="email" required placeholder="player@example.com" class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Primary Position & Grad Year</label>
-                        <input type="text" placeholder="Midfielder - 2026" class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Message / Video Link</label>
-                        <textarea rows="4" placeholder="Share your experience, highlight video, or questions..." class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm"></textarea>
-                    </div>
-                    <button type="submit" class="w-full py-4 bg-acOrange hover:bg-acOrangeHover text-white font-bold rounded-xl shadow-lg transition-all text-sm uppercase tracking-wider">
-                        Send Message to Coaching Staff
-                    </button>
-                </form>
-            </div>
-        </section>
+    <!-- 1. PASTE YOUR WEB3FORMS ACCESS KEY HERE -->
+    <input type="hidden" name="access_key" value="fc775256-891e-4d85-9af9-fa821fb03c35">
+
+    <!-- 2. OPTIONAL: Custom Email Subject Line -->
+    <input type="hidden" name="subject" value="New Recruit Inquiry - Angelina Soccer">
+
+    <!-- 3. OPTIONAL: Prevents Spam / Bots -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <div class="grid sm:grid-cols-2 gap-6">
+        <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">First & Last Name</label>
+            <input type="text" name="name" required placeholder="John Doe" class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm">
+        </div>
+        <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Email Address</label>
+            <input type="email" name="email" required placeholder="player@example.com" class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm">
+        </div>
+    </div>
+
+    <div>
+        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Message / Video Link</label>
+        <textarea name="message" rows="4" required placeholder="Share your experience, highlight video, or questions..." class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm"></textarea>
+    </div>
+
+    <button type="submit" class="w-full py-4 bg-acOrange hover:bg-acOrangeHover text-white font-bold rounded-xl shadow-lg transition-all text-sm uppercase tracking-wider">
+        Submit
+    </button>
+</form>
     </main>
 
     <footer class="bg-black border-t border-gray-900 py-10">

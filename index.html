@@ -339,30 +339,22 @@
             </div>
 
             <!-- RIGHT: Championship Key Stats Grid -->
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
-                
-                <div style="padding: 1.25rem; border-radius: 0.75rem; background-color: #1f2937; border: 1px solid #374151;">
-                    <div style="font-size: 2rem; font-weight: 900; color: #ff6700;">Championship Resilience</div>
-                    <div style="font-size: 0.75rem; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Rallied from a 1–0 halftime deficit to defeat Tyler JC 2–1 for the Region 14 title.</div>
-                </div>
-
-                <div style="padding: 1.25rem; border-radius: 0.75rem; background-color: #1f2937; border: 1px solid #374151;">
-                    <div style="font-size: 2rem; font-weight: 900; color: #2563eb;">Unbeaten on Home Turf</div>
-                    <div style="font-size: 0.75rem; font-weight: 700; color: #94a3b8; text-transform: uppercase;">8-0-1 regular and postseason record at the AC Soccer Complex.</div>
-                </div>
-
-                <div style="padding: 1.25rem; border-radius: 0.75rem; background-color: #1f2937; border: 1px solid #374151;">
-                    <div style="font-size: 2rem; font-weight: 900; color: #ff6700;">Gulf South District Champions</div>
-                    <div style="font-size: 0.75rem; font-weight: 700; color: #94a3b8; text-transform: uppercase;">unched a ticket to the NJCAA D1 National Tournament in Wichita, KS.</div>
-                </div>
-
-                <div style="padding: 1.25rem; border-radius: 0.75rem; background-color: #1f2937; border: 1px solid #374151;">
-                    <div style="font-size: 2rem; font-weight: 900; color: #2563eb;">Double Banner Season</div>
-                    <div style="font-size: 0.75rem; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Clinched both conference and district titles in a historic 13-2-2 campaign.</div>
-                </div>
-
-            </div>
-
+           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-4xl mx-auto pt-2">
+        <div class="p-4 rounded-xl bg-[#1b222d] border-l-4 border-l-[#ff6700] border-y border-r border-gray-800/80">
+            <h4 class="text-white font-extrabold text-sm uppercase mb-1">Unbeaten on Home Turf</h4>
+            <p class="text-gray-400 text-xs">8-0-1 regular and postseason record at the AC Soccer Complex.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[#1b222d] border-l-4 border-l-[#2563eb] border-y border-r border-gray-800/80">
+            <h4 class="text-white font-extrabold text-sm uppercase mb-1">Championship Resilience</h4>
+            <p class="text-gray-400 text-xs">Rallied from a 1–0 halftime deficit to defeat Tyler JC 2–1 for the Region 14 title.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[#1b222d] border-l-4 border-l-[#ff6700] border-y border-r border-gray-800/80">
+            <h4 class="text-white font-extrabold text-sm uppercase mb-1">Gulf South District Champions</h4>
+            <p class="text-gray-400 text-xs">Punched a ticket to the NJCAA D1 National Tournament in Wichita, KS.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[#1b222d] border-l-4 border-l-[#2563eb] border-y border-r border-gray-800/80">
+            <h4 class="text-white font-extrabold text-sm uppercase mb-1">Double Banner Season</h4>
+            <p class="text-gray-400 text-xs">Clinched both conference and district titles in a historic 13-2-2 campaign.</p>
         </div>
     </div>
 </section>
@@ -426,29 +418,26 @@
         startChampionCarouselTimer();
     });
 </script>
-<section id="stats" class="py-16 bg-acDarkBg border-b>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-black text-white uppercase tracking-tight mb-8">Season Overview</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="p-6 rounded-xl bg-gray-800/60 border border-gray-700">
-                    <div class="text-4xl font-black text-orange-500 mb-1">13-2-2</div>
-                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wider">Overall Record</div>
-                </div>
-                <div class="p-6 rounded-xl bg-gray-800/60 border border-gray-700">
-                    <div class="text-4xl font-black text-blue-500 mb-1">42</div>
-                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wider">Goals Scored</div>
-                </div>
-                <div class="p-6 rounded-xl bg-gray-800/60 border border-gray-700">
-                    <div class="text-4xl font-black text-orange-500 mb-1">14</div>
-                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wider">Goals Allowed</div>
-                </div>
-                <div class="p-6 rounded-xl bg-gray-800/60 border border-gray-700">
-                    <div class="text-4xl font-black text-blue-500 mb-1">9</div>
-                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wider">Clean Sheets</div>
-                </div>
-            </div>
+<section class="py-10 px-4 max-w-5xl mx-auto space-y-4">
+    <!-- Top 4 Stat Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+        <div class="p-4 sm:p-6 rounded-2xl bg-[#1b222d] border border-gray-800/80">
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#ff6700] block mb-1">13-2-2</span>
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Overall Record</span>
         </div>
-    </section>
+        <div class="p-4 sm:p-6 rounded-2xl bg-[#1b222d] border border-gray-800/80">
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#2563eb] block mb-1">8-0-1</span>
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Home Record</span>
+        </div>
+        <div class="p-4 sm:p-6 rounded-2xl bg-[#1b222d] border border-gray-800/80">
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#ff6700] block mb-1">42 : 14</span>
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Goals Scored VS Conceded</span>
+        </div>
+        <div class="p-4 sm:p-6 rounded-2xl bg-[#1b222d] border border-gray-800/80">
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#2563eb] block mb-1">#1</span>
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Region 14 Rank</span>
+        </div>
+    </div>
 <!-- NEXT LEVEL PLAYERS SECTION (14 PLAYERS SLIDER) -->
 <section id="next-level" class="py-20 relative bg-neutral-900 border-b border-neutral-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1054,59 +1043,38 @@
                         </div>
 
                         <!-- Slide 2: Student Lounge & Social Area -->
-                        <div class="w-[25%] h-full relative shrink-0 cursor-pointer" onclick="openLightbox('https://placehold.co/1200x800/2563eb/ffffff?text=Student+Lounge+%26+Recreation')">
-                            <img src="gaming.png" alt="Student Lounge & Recreation" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/30 to-transparent"></div>
-                            <div class="absolute bottom-8 left-8 right-8">
-                                <span class="bg-[#2563eb] text-white px-3 py-1 rounded text-xs font-extrabold uppercase tracking-wider mb-2 inline-block">
-                                    Community
-                                </span>
-                                <h3 class="text-2xl font-black text-white mb-1">Student Lounge & Game Area</h3>
-                                <p class="text-gray-300 text-sm max-w-xl">Relax with teammates in shared common spaces featuring lounge seating, big-screen TVs, and gaming units.</p>
-                            </div>
-                        </div>
+<section class="px-4 max-w-5xl mx-auto my-10">
+    <div class="relative rounded-2xl overflow-hidden border border-gray-800 bg-[#1b222d] shadow-2xl h-[320px] sm:h-[480px]"
+         onmouseenter="pauseHousingCarousel()" onmouseleave="resumeHousingCarousel()">
+        
+        <div id="housing-carousel-track" class="flex transition-transform duration-500 ease-in-out h-full w-[400%]">
+            <!-- Slide 1 -->
+            <div class="w-[25%] h-full relative shrink-0">
+                <img src="housing-1.png" alt="Dorm Suites" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/30 to-transparent"></div>
+                <div class="absolute bottom-6 left-4 right-4 sm:left-8 sm:right-8">
+                    <span class="bg-[#ff6700] text-white px-2.5 py-0.5 rounded text-[10px] sm:text-xs font-extrabold uppercase mb-1 inline-block">Suite Living</span>
+                    <h3 class="text-lg sm:text-2xl font-black text-white mb-1">Spacious Dorm Suites</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm line-clamp-2 sm:line-clamp-none">Fully furnished rooms equipped with Wi-Fi, study desks, and private baths.</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="w-[25%] h-full relative shrink-0">
+                <img src="housing-2.png" alt="Student Lounge" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/30 to-transparent"></div>
+                <div class="absolute bottom-6 left-4 right-4 sm:left-8 sm:right-8">
+                    <span class="bg-[#2563eb] text-white px-2.5 py-0.5 rounded text-[10px] sm:text-xs font-extrabold uppercase mb-1 inline-block">Community</span>
+                    <h3 class="text-lg sm:text-2xl font-black text-white mb-1">Student Lounge</h3>
+                    <p class="text-gray-300 text-xs sm:text-sm line-clamp-2 sm:line-clamp-none">Relax with teammates in shared common spaces featuring gaming units.</p>
+                </div>
+            </div>
+        </div>
 
-                        <!-- Slide 3: Housing Exterior & Campus Grounds -->
-                        <div class="w-[25%] h-full relative shrink-0 cursor-pointer" onclick="openLightbox('https://placehold.co/1200x800/1b222d/ffffff?text=On-Campus+Housing+Exterior')">
-                            <img src="housing-2.png" alt="On-Campus Housing Exterior" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/30 to-transparent"></div>
-                            <div class="absolute bottom-8 left-8 right-8">
-                                <span class="bg-[#ff6700] text-white px-3 py-1 rounded text-xs font-extrabold uppercase tracking-wider mb-2 inline-block">
-                                    Convenience
-                                </span>
-                                <h3 class="text-2xl font-black text-white mb-1">On-Campus Residence Hall</h3>
-                                <p class="text-gray-300 text-sm max-w-xl">Located just minutes from the soccer complex, dining hall, and academic buildings in Lufkin.</p>
-                            </div>
-                        </div>
-
-                        <!-- Slide 4: Study Rooms & Amenities -->
-                        <div class="w-[25%] h-full relative shrink-0 cursor-pointer" onclick="openLightbox('https://placehold.co/1200x800/2563eb/ffffff?text=Quiet+Study+Rooms+%26+Laundry')">
-                            <img src="machines.png" alt="Quiet Study Rooms & Laundry" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/30 to-transparent"></div>
-                            <div class="absolute bottom-8 left-8 right-8">
-                                <span class="bg-[#2563eb] text-white px-3 py-1 rounded text-xs font-extrabold uppercase tracking-wider mb-2 inline-block">
-                                    Academic Support
-                                </span>
-                                <h3 class="text-2xl font-black text-white mb-1">On-Site Laundry</h3>
-                                <p class="text-gray-300 text-sm max-w-xl">24/7 laundry facilities for all living residents.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Left Navigation Arrow Button -->
-                    <button onclick="prevHousingSlide()" 
-                            aria-label="Previous Housing Slide"
-                            class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center hover:bg-[#ff6700] transition-all z-20">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-
-                    <!-- Right Navigation Arrow Button -->
-                    <button onclick="nextHousingSlide()" 
-                            aria-label="Next Housing Slide"
-                            class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center hover:bg-[#ff6700] transition-all z-20">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
+        <!-- Arrows -->
+        <button onclick="prevHousingSlide()" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center z-20"><i class="fa-solid fa-chevron-left text-xs sm:text-base"></i></button>
+        <button onclick="nextHousingSlide()" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center z-20"><i class="fa-solid fa-chevron-right text-xs sm:text-base"></i></button>
+    </div>
+</section>
 
                     <!-- Carousel Dots Pagination -->
                     <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
@@ -1148,48 +1116,26 @@
             </div>
 
             <!-- Housing Director Contact Box (Coltone Radke) -->
-            <div class="max-w-4xl mx-auto my-16 bg-[#1b222d] border border-gray-800/80 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-                
-                <!-- Left Side: Profile Picture & Details -->
-                <div class="flex items-center gap-5">
-                    <!-- Profile Picture Container (White Background) -->
-                    <div class="w-20 h-20 rounded-full bg-white overflow-hidden border-2 border-[#2563eb] shrink-0 shadow-md">
-                        <img 
-                            src="coltone_2.png" 
-                            alt="Coltone Radke" 
-                            class="w-full h-full object-cover object-top"
-                            onerror="this.src='https://placehold.co/300x300/ffffff/111827?text=Coltone+R.'"
-                        />
-                    </div>
-
-                    <!-- Name & Title -->
-                    <div>
-                        <span class="text-[11px] font-extrabold text-[#ff6700] uppercase tracking-wider block mb-0.5">
-                            Housing Director Contact
-                        </span>
-                        <h3 class="text-xl font-extrabold text-white tracking-wide">
-                            Coltone Radke
-                        </h3>
-                        <p class="text-xs text-slate-400 font-medium">
-                            Director of Student Housing & Residential Life
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Right Side: Email Button -->
-                <div class="shrink-0 w-full md:w-auto">
-                    <a 
-                        href="mailto:cradke@angelina.edu" 
-                        class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#111827] hover:bg-[#2563eb] border border-gray-800 text-white text-xs font-bold transition-all shadow-md group w-full md:w-auto"
-                    >
-                        <i class="fa-solid fa-envelope text-[#2563eb] group-hover:text-white transition-colors"></i>
-                        <span>cradke@angelina.edu</span>
-                    </a>
-                </div>
-
+            <div class="max-w-4xl mx-auto my-10 px-4">
+    <div class="bg-[#1b222d] border border-gray-800/80 rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4 w-full sm:w-auto">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white overflow-hidden border-2 border-[#2563eb] shrink-0 shadow-md">
+                <img src="coltone-radke.jpg" alt="Coltone Radke" class="w-full h-full object-cover object-top">
             </div>
-
+            <div>
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-[#ff6700] uppercase tracking-wider block mb-0.5">Housing Director Contact</span>
+                <h3 class="text-lg sm:text-xl font-extrabold text-white">Coltone Radke</h3>
+                <p class="text-xs text-slate-400">Director of Student Housing & Residential Life</p>
+            </div>
         </div>
+        <div class="w-full sm:w-auto shrink-0">
+            <a href="mailto:cradke@angelina.edu" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#111827] hover:bg-[#2563eb] border border-gray-800 text-white text-xs font-bold transition-all w-full sm:w-auto">
+                <i class="fa-solid fa-envelope text-[#2563eb]"></i>
+                <span>cradke@angelina.edu</span>
+            </a>
+        </div>
+    </div>
+</div>
     </section>
         <!-- Facilities Section -->
 <section id="facilities" class="py-20 bg-acDarkBg border-b border-gray-800">
@@ -1449,45 +1395,37 @@
 </section>
 
         <!-- Contact Section -->
-                <section id="contact" class="py-20 bg-acDarkBg">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <span class="text-acOrange font-bold text-sm tracking-widest uppercase mb-2 block">Recruiting & Information</span>
-                <h2 class="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight mb-4">Get In Touch</h2>
-                <div class="h-1 w-20 bg-acBlue mx-auto rounded-full mb-8"></div>
-                <p class="text-gray-400 text-lg mb-12">Interested in joining the Angelina College Men's Soccer Program? Contact our coaching staff today.</p>
-        <form action="https://api.web3forms.com/submit" method="POST" class="bg-acCardBg p-8 sm:p-10 rounded-3xl border border-gray-800 text-left space-y-6">
+               <section id="contact" class="py-12 px-4 max-w-4xl mx-auto text-center">
+    <span class="text-[#ff6700] font-bold text-xs sm:text-sm tracking-widest uppercase mb-2 block">Recruiting & Information</span>
+    <h2 class="text-2xl sm:text-5xl font-black text-white uppercase tracking-tight mb-4">Get In Touch</h2>
+    <div class="h-1 w-20 bg-[#2563eb] mx-auto rounded-full mb-8"></div>
 
-    <!-- 1. PASTE YOUR WEB3FORMS ACCESS KEY HERE -->
-    <input type="hidden" name="access_key" value="fc775256-891e-4d85-9af9-fa821fb03c35">
-
-    <!-- 2. OPTIONAL: Custom Email Subject Line -->
-    <input type="hidden" name="subject" value="New Recruit Inquiry - Angelina Soccer">
-
-    <!-- 3. OPTIONAL: Prevents Spam / Bots -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-    <div class="grid sm:grid-cols-2 gap-6">
-        <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">First & Last Name</label>
-            <input type="text" name="name" required placeholder="John Doe" class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm">
+    <form action="https://api.web3forms.com/submit" method="POST" class="bg-[#1b222d] p-5 sm:p-10 rounded-2xl sm:rounded-3xl border border-gray-800 text-left space-y-4 sm:space-y-6">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div>
+                <label class="block text-xs font-semibold uppercase text-gray-400 mb-1 sm:mb-2">First & Last Name</label>
+                <input type="text" name="name" required placeholder="John Doe" class="w-full bg-[#111827] text-white px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-gray-800 text-sm">
+            </div>
+            <div>
+                <label class="block text-xs font-semibold uppercase text-gray-400 mb-1 sm:mb-2">Email Address</label>
+                <input type="email" name="email" required placeholder="player@example.com" class="w-full bg-[#111827] text-white px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-gray-800 text-sm">
+            </div>
         </div>
         <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Email Address</label>
-            <input type="email" name="email" required placeholder="player@example.com" class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm">
+            <label class="block text-xs font-semibold uppercase text-gray-400 mb-1 sm:mb-2">Primary Position & Grad Year</label>
+            <input type="text" name="position" placeholder="Midfielder - 2026" class="w-full bg-[#111827] text-white px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-gray-800 text-sm">
         </div>
-    </div>
-
-    <div>
-        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Message / Video Link</label>
-        <textarea name="message" rows="4" required placeholder="Share your experience, highlight video, or questions..." class="w-full bg-acDarkBg text-white px-4 py-3 rounded-xl border border-gray-800 focus:outline-none focus:border-acBlue text-sm"></textarea>
-    </div>
-
-    <button type="submit" class="w-full py-4 bg-acOrange hover:bg-acOrangeHover text-white font-bold rounded-xl shadow-lg transition-all text-sm uppercase tracking-wider">
-        Submit
-    </button>
-</form>
-    </main>
-
+        <div>
+            <label class="block text-xs font-semibold uppercase text-gray-400 mb-1 sm:mb-2">Message / Video Link</label>
+            <textarea name="message" rows="4" placeholder="Share your experience or highlight video..." class="w-full bg-[#111827] text-white px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl border border-gray-800 text-sm"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3.5 sm:py-4 bg-[#ff6700] hover:bg-orange-600 text-white font-bold rounded-xl text-xs sm:text-sm uppercase tracking-wider">
+            Send Message to Coaching Staff
+        </button>
+    </form>
+</section>
     <footer class="bg-black border-t border-gray-900 py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
             <div class="flex items-center space-x-2">

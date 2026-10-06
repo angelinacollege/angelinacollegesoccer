@@ -154,7 +154,7 @@
             <!-- Image Frame -->
             <div class="relative rounded-2xl overflow-hidden border border-gray-800/80 bg-[#1b222d] shadow-2xl aspect-[4/3] sm:aspect-[16/10]">
                 <!-- Replace 'hero-soccer.jpg' with your actual image filename -->
-                <img src="housing-facilities.jpg" alt="Angelina College Soccer Team" class="w-full h-full object-cover">
+                <img src="celeb-fans.jpeg" alt="Angelina College Soccer Team" class="w-full h-full object-cover">
                 
                 <!-- Subtle Gradient Overlay -->
                 <div class="absolute inset-0 bg-gradient-to-t from-gray-950/60 via-transparent to-transparent"></div>
@@ -867,7 +867,92 @@
     }
 })();
 </script>
+<!-- Tactical Match Film Section -->
+<section id="match-film" class="py-12 sm:py-20 px-4 max-w-6xl mx-auto clear-both">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-8 sm:mb-12">
+        <span class="text-[#ff6700] font-extrabold text-xs sm:text-sm tracking-widest uppercase mb-1 block">
+            Tactical Showcase
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white uppercase tracking-tight">
+            Full Match Analysis
+        </h2>
+        <div class="h-1 w-16 bg-[#2563eb] mx-auto rounded-full mt-3"></div>
+    </div>
 
+    <!-- Video & Details Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#1b222d] border border-gray-800 rounded-3xl p-4 sm:p-8 shadow-2xl">
+        
+        <!-- Embedded Video Player (7 Columns on Desktop) -->
+        <div class="lg:col-span-7 relative w-full">
+            <div class="absolute -inset-1 bg-gradient-to-r from-[#2563eb] to-[#ff6700] rounded-2xl blur-lg opacity-25"></div>
+            <div class="relative rounded-2xl overflow-hidden border border-gray-800 bg-gray-950 shadow-xl">
+                <!-- Video Header Bar -->
+                <div class="bg-[#111827] px-4 py-3 border-b border-gray-800 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+                        <span class="text-xs font-extrabold text-white uppercase tracking-wider">Full Match Film</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-[#ff6700] bg-[#ff6700]/10 px-2.5 py-0.5 rounded border border-[#ff6700]/20">3-5-2 System</span>
+                </div>
+
+                <!-- 16:9 Responsive Video Frame -->
+                <div class="relative aspect-video w-full">
+                    <iframe 
+                        class="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/aVf0n-GdxlE" 
+                        title="Example of a full match (3-5-2 System)" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Match Info & Key Points (5 Columns on Desktop) -->
+        <div class="lg:col-span-5 space-y-5">
+            <div>
+                <span class="bg-[#2563eb]/20 text-[#2563eb] border border-[#2563eb]/30 text-[10px] sm:text-xs font-extrabold uppercase px-2.5 py-1 rounded inline-block mb-2">
+                    Game Film Breakdown
+                </span>
+                <h3 class="text-xl sm:text-2xl font-black text-white leading-tight">
+                    Example of a Full Match (3-5-2 System)
+                </h3>
+            </div>
+
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                Watch our tactical execution, defensive shape, and high-tempo attacking transitions in this full match recording operating under our core 3-5-2 tactical system.
+            </p>
+
+            <!-- Key Tactical Highlights -->
+            <div class="space-y-3 pt-2">
+                <div class="flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-lg bg-[#ff6700]/10 border border-[#ff6700]/30 text-[#ff6700] flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">1</div>
+                    <p class="text-xs text-gray-300"><strong class="text-white">Wing-Back Width:</strong> Overloading wide channels to stretch defensive lines.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-lg bg-[#2563eb]/10 border border-[#2563eb]/30 text-[#2563eb] flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">2</div>
+                    <p class="text-xs text-gray-300"><strong class="text-white">Central Compactness:</strong> 3-midfielder structure controlling possession and pressing triggers.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-lg bg-[#ff6700]/10 border border-[#ff6700]/30 text-[#ff6700] flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">3</div>
+                    <p class="text-xs text-gray-300"><strong class="text-white">Direct Pathways:</strong> Vertical passing options into two forward strikers.</p>
+                </div>
+            </div>
+
+            <!-- External Watch Link -->
+            <div class="pt-2">
+                <a href="https://www.youtube.com/live/aVf0n-GdxlE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-[#2563eb] hover:text-blue-400 transition-colors">
+                    <span>Watch directly on YouTube</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
         <!-- Housing Section -->
         <section id="housing" class="py-20 bg-acDarkBg ">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -910,13 +995,7 @@
                     </div>
 
 
-                        <div class="bg-acBlue/10 border border-acBlue/40 p-6 rounded-2xl flex items-center justify-between">
-                            <div>
-                                <span class="block text-sm font-semibold text-acBlueLight">Full Academic Year Total</span>
-                                <span class="block text-xs text-gray-400">Includes complete room & full board dining plan</span>
-                            </div>
-                            <div class="text-2xl sm:text-3xl font-black text-white">$7,660</div>
-                        </div>
+                    
                     </div>
                 </div>
 
